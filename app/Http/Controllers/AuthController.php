@@ -36,7 +36,7 @@ class AuthController extends Controller
     }
 
     public function signUp(Request $request){
-        if(User::where('email', $request->email)) return response()->json(['error'=>'Email already taken.'], 401);
+        if(User::where('email', $request->email)->get()) return response()->json(['error'=>'Email already taken.'], 401);
         $user = User::create($request->all());
         return $this->login($request);
     }
