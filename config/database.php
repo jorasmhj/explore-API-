@@ -42,7 +42,7 @@ return [
         ],
 
         'pgsql' => [
-            'driver' => 'mysql',
+            'driver' => 'pgsql',
             'host' => 'ec2-54-83-204-230.compute-1.amazonaws.com',
             'port' => 5432,
             'database' => 'd15ma0c607voiu',
