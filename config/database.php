@@ -43,11 +43,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => 'ec2-54-83-204-230.compute-1.amazonaws.com',
+            'host' => 'ec2-54-83-3-101.compute-1.amazonaws.com',
             'port' => 5432,
-            'database' => 'd15ma0c607voiu',
-            'username' => 'efjgxblenebkzq',
-            'password' => '52aad78244e72455131cbcfb10fff914adbb29bf164b4767c71c530523c76e99',
+            'database' => 'd7p4io9e5q3cmg',
+            'username' => 'ltxhvrkhmlrfgt',
+            'password' => 'dda91fa61cfd43daeadc33ba5023b3c9945fc85ac654965f4848cf750380905e',
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
