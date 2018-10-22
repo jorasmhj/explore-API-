@@ -1,6 +1,6 @@
 <?php
 
-$DATABASE_URL = parse_url(getenv("DATABASE_URL"));
+$DATABASE_URL = parse_url("postgres://ltxhvrkhmlrfgt:dda91fa61cfd43daeadc33ba5023b3c9945fc85ac654965f4848cf750380905e@ec2-54-83-3-101.compute-1.amazonaws.com:5432/d7p4io9e5q3cmg");
 
 return [
 
@@ -42,12 +42,12 @@ return [
         ],
 
         'pgsql' => [
-            'driver' => 'pgsql',
-            'host' => $DATABASE_URL["host"],
-            'port' => $DATABASE_URL["port"],
-            'database' => ltrim($DATABASE_URL["path"], "/"),
-            'username' => $DATABASE_URL["user"],
-            'password' => $DATABASE_URL["pass"],
+            'driver' => 'mysql',
+            'host' => 'ec2-54-83-204-230.compute-1.amazonaws.com',
+            'port' => 5432,
+            'database' => 'd15ma0c607voiu',
+            'username' => 'efjgxblenebkzq',
+            'password' => '52aad78244e72455131cbcfb10fff914adbb29bf164b4767c71c530523c76e99',
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
@@ -67,19 +67,6 @@ return [
             'prefix' => '',
             'strict' => true,
             'engine' => null,
-        ],
-
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
-            'charset' => 'utf8',
-            'prefix' => '',
-            'schema' => 'public',
-            'sslmode' => 'prefer',
         ],
 
         'sqlsrv' => [
