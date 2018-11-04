@@ -27,7 +27,7 @@ class PostController extends Controller
     }
 
     public function getPost(){
-        $posts = Posts::with('user')->where('user_id', auth()->user()->id)->latest()->take(5)->get();
+        $posts = Posts::with('user')->latest()->get();
         return response()->json($posts);
     }
 
