@@ -11,4 +11,7 @@ Route::group([
     Route::post('me', 'AuthController@me');
     Route::post('signup', 'AuthController@signUp');
     Route::get('getUser/{id}', 'api\UserController@getUser');
+    Route::post('post', 'PostController@createPost');
+    Route::post('post/{id}', 'PostController@removePost');
+    Route::get('post', 'PostController@getPost');
 });
