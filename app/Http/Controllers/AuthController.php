@@ -59,7 +59,8 @@ class AuthController extends Controller
      */
     public function uploadProfilePic(Request $request)
     {
-        return $request->file('fd');
+        $file = $request->file('fd');
+        return $file->getClientOriginalName();
     }
 
     /**
