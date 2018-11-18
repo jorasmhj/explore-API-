@@ -59,7 +59,13 @@ class AuthController extends Controller
      */
     public function uploadProfilePic(Request $request)
     {
-        return $request->fd;
+        $file = $request->file('photo');
+        dd($file);
+        $file = $request->photo;
+
+        // get the original file name
+        $filename = $request->file('photo')->getClientOriginalName();
+        $filename = $request->photo->getClientOriginalName();
         if ($request->fd->hasFile('photo')) {
             $file = $request->photo;
             $path = $request->photo->store('images');
