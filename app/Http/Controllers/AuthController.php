@@ -59,7 +59,7 @@ class AuthController extends Controller
      */
     public function uploadProfilePic(Request $request)
     {
-        dd($request);
+        return $request;
     }
 
     /**
