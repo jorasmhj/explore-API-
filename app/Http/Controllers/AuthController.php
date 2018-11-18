@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
+use Input;
 
 class AuthController extends Controller
 {
@@ -58,11 +59,8 @@ class AuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function uploadProfilePic(Request $request)
-    {
-        $file = $request->file('photo');
-        dd($file);
-        $file = $request->photo;
-
+    {   
+        return Input::all();
         // get the original file name
         $filename = $request->file('photo')->getClientOriginalName();
         $filename = $request->photo->getClientOriginalName();
