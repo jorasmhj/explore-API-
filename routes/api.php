@@ -14,4 +14,5 @@ Route::group([
     Route::post('post', 'PostController@createPost');
     Route::post('post/{id}', 'PostController@removePost');
     Route::get('post', 'PostController@getPost');
+    Route::post('post', 'uploadpropic@uploadProfilePic');
 });

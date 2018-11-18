@@ -51,6 +51,17 @@ class AuthController extends Controller
         return response()->json(auth()->user());
     }
 
+
+    /**
+     * Get the authenticated User.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function uploadProfilePic(Request $request)
+    {
+        dd($request);
+    }
+
     /**
      * Log the user out (Invalidate the token).
      *
