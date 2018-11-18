@@ -59,7 +59,12 @@ class AuthController extends Controller
      */
     public function uploadProfilePic(Request $request)
     {
-        dd($request);
+        if ($request->hasFile('photo')) {
+            $file = $request->photo;
+            $path = $request->photo->store('images');
+            return 'has image';
+        }
+        return 'no image sent';
     }
 
     /**
