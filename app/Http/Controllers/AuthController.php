@@ -59,8 +59,7 @@ class AuthController extends Controller
      */
     public function uploadProfilePic(Request $request)
     {
-        ini_set('memory_limit','256M');
-        print_r($request);
+        dd($request);
     }
 
     /**
